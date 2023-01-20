@@ -1,8 +1,8 @@
-vip_room = {'place1': 'David', 'place2': 'Ketrin', 'place3': 'Misha', 'place4': 'Mark'}
-room = {'place5': 'Peter', 'place6': 'Maria', 'place7': None, 'place8': None}
+vip_room = frozenset(('David', 'Mark', 'Bruce'))
+room = frozenset((None, 'Michael', 'Kat', None))
 
-all_guests = {**vip_room, **room}
-for names in all_guests.values():
-    if names == None:
+all_guests = frozenset.union(vip_room, room)
+for x in all_guests:
+    if x == None:
         continue
-    print(names)
+    print(x)
