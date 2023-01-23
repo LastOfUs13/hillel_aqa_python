@@ -6,7 +6,7 @@ for index in range(len(mlist)):
         even_tuple = ("index - " + str(index) + ", key- " + str(mlist[index]))
         even.append(even_tuple)
 
-    if index % 2 != 0:
+    else:
         odd_tuple = ("index - " + str(index) + ", key-" + str(mlist[index]))
         odd.append(odd_tuple)
 
