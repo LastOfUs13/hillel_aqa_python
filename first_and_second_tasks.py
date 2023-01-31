@@ -42,3 +42,4 @@ with open('my_file.txt', 'r') as file:
             print(new_lsit[0] * new_lsit[1])
 
 
+
