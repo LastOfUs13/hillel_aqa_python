@@ -3,7 +3,7 @@ import os
 import random
 
 # import shutil
-#
+
 # shutil.rmtree("test")
 
 if __name__ == '__main__':
@@ -40,6 +40,3 @@ with open('my_file.txt', 'r') as file:
             print(new_lsit[0] - new_lsit[1])
         if new_lsit[2] == 3:
             print(new_lsit[0] * new_lsit[1])
-
-
-
