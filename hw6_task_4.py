@@ -1,9 +1,16 @@
-if __name__ == "__main__":
-
-    def clean_all_the_lines(file):
-        with open(file, 'w') as file:
-            file.writelines("")
+import re
 
 
-    clean_all_the_lines(file="")
+def remove_numbers(file):
+    with open(file, "r") as file_in:
+        contents = file_in.read()
 
+    no_numbers = re.sub(r'\d+', '', contents)
+    final_res = str(no_numbers)
+
+    with open(file, 'w') as file_out:
+        file_out.write(final_res)
+
+
+if __name__ == '__main__':
+    remove_numbers("some.txt")

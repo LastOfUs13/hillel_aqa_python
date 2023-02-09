@@ -1,20 +1,17 @@
-def arithmetic(left_operand: int, right_operand: int, operation):
+def arithmetic(left_operand, right_operand, operation):
     """
-            Apply arithmetic operation for provided left and right operands
-
+        Apply arithmetic operation for provided left and right operands
     """
-
-    if operation == "+":
+    if operation == '+':
         return left_operand + right_operand
-    if operation == "-":
+    elif operation == '-':
         return left_operand - right_operand
-    if operation == "*":
+    elif operation == '*':
         return left_operand * right_operand
-    if operation == "/":
+    elif operation == '/':
         return left_operand / right_operand
     else:
-        error_message = f"Not known operation: {operation}"
-        return error_message
+        return f"Not known operation: {operation}"
 
 # final = arithmetic(left_operand=6, right_operand=5, operation="*")
 # print(final)
@@ -25,13 +22,13 @@ if __name__ == "__main__":
     assert arithmetic(25, 5, operation="/") == 5
     assert type(arithmetic(25, 5, operation="/")) == float
     assert arithmetic(5, 5, operation="//") == f"Not known operation: //"
-    c = 0
-    assert arithmetic.__doc__ == """
-            Apply arithmetic operation for provided left and right operands
-
-    """
+    assert arithmetic.__doc__ == (
+        f"\n{' ' * 8}"
+        f"Apply arithmetic operation for provided left and right operands\n"
+        f"{' ' * 4}"""
+    )
     assert arithmetic.__code__.co_name == "arithmetic"
-    assert arithmetic.__code__.co_varnames == ("left_operand", "right_operand", "operation", "error_message")
+    assert arithmetic.__code__.co_varnames == ("left_operand", "right_operand", "operation")
     try:
         arithmetic(1, 2, 3)
     except TypeError as e:
