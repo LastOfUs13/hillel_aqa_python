@@ -14,3 +14,4 @@ def remove_numbers(file):
 
 if __name__ == '__main__':
     remove_numbers("some.txt")
+
