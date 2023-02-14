@@ -1,4 +1,3 @@
-"""task1"""
 import os
 import random
 
@@ -6,9 +5,9 @@ import random
 
 # shutil.rmtree("test")
 
-if __name__ == '__main__':
-    os.makedirs("./test/data")
-    os.chdir("./test/data")
+# if __name__ == '__main__':
+#     os.makedirs("./test/data")
+#     os.chdir("./test/data")
 
 """task1"""
 
