@@ -8,6 +8,7 @@ def remove_numbers(file):
     no_numbers = re.sub(r'\d+', '', contents)
     final_res = str(no_numbers)
 
+
     with open(file, 'w') as file_out:
         file_out.write(final_res)
 

@@ -12,5 +12,3 @@ if __name__ == '__main__':
 
     result = find_square_data(side=5)
     print(result)
-
-
