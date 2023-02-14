@@ -10,8 +10,10 @@ if __name__ == '__main__':
     os.makedirs("./test/data")
     os.chdir("./test/data")
 
-some_list = []
+"""task1"""
 
+
+some_list = []
 
 def get_the_numbers():
     left_op = random.randint(1, 100)
