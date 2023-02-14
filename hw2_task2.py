@@ -4,3 +4,4 @@ Toshiba.extend(Eleks)
 Eleks.clear()
 print(Toshiba)
 print(Eleks)
+
