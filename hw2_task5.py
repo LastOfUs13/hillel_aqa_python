@@ -6,3 +6,4 @@ for x in all_guests:
     if x == None:
         continue
     print(x)
+
