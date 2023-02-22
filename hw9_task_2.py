@@ -75,4 +75,3 @@ class Staff():
 
 if __name__ == '__main__':
     employee = Staff()
-

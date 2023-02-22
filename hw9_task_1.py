@@ -85,4 +85,3 @@ class Business():
 
 if __name__ == '__main__':
     company = Business()
-
