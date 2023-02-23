@@ -66,9 +66,6 @@ class Business():
         else:
             raise TypeError("this data must be a string")
 
-    def tell_about_ceo(self):
-        return f"{self.ceo} was a engineer, and born leader."
-
     @staticmethod
     def calculate_how_old_company(foundation_year):
         import datetime
@@ -82,7 +79,9 @@ class Business():
     def tell_about_company(self):
         return f"{self.title} was created in {self.foundation_year} by {self.ceo} and few his friends"
 
+    def tell_about_ceo(self):
+        return f"{self.ceo} was a engineer, and born leader."
+
 
 if __name__ == '__main__':
-    pass
-
+    Business.create_company_shortly('Sony Entertainment', 'game development')

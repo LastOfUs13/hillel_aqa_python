@@ -80,4 +80,5 @@ class Staff():
 
 
 if __name__ == '__main__':
-    pass
+    Staff.create_new_staff('cleaner', 'Misha')
+
