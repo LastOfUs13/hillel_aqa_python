@@ -78,3 +78,7 @@ class Business():
 
     def tell_about_company(self):
         return f"{self.title} was created in {self.foundation_year} by {self.ceo} and few his friends"
+
+
+if __name__ == '__main__':
+    Business.create_company_shortly('Sony Entertainment', 'game development')
