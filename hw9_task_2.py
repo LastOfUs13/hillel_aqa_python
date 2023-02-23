@@ -1,6 +1,7 @@
 class Staff():
 
-    def __init__(self, name=None, gender=None, age=None, job_position=None, years_experience=None):
+    def __init__(self, name: str = None, gender: str = None, age: int = None, job_position: str = None,
+                 years_experience: int = None):
         self.__name = name
         self.__gender = gender
         self.__age = age
@@ -32,14 +33,15 @@ class Staff():
         if isinstance(staff_name, str):
             self.__name = staff_name
         else:
-            raise TypeError
+            raise TypeError("this data must be a string")
 
     @gender.setter
     def gender(self, staff_gender):
-        if isinstance(staff_gender, str) and staff_gender == 'male' or staff_gender == 'female':
+        GENDER = ['male', 'female']
+        if isinstance(staff_gender, str) and staff_gender in GENDER:
             self.__gender = staff_gender
         else:
-            raise TypeError
+            raise TypeError("this data must be a string ('male' or 'female')")
 
     @age.setter
     def age(self, staff_age):
@@ -47,31 +49,35 @@ class Staff():
         if isinstance(staff_age, int) and condition:
             self.__age = staff_age
         else:
-            raise TypeError
+            raise TypeError("this data must be an int (available diapason: 18-65 years)")
 
     @job_position.setter
     def job_position(self, staff_job_position):
         if isinstance(staff_job_position, str):
             self.__job_position = staff_job_position
         else:
-            raise TypeError
+            raise TypeError("this data must be a string")
 
     @years_experience.setter
     def years_experience(self, staff_years_experience):
-        self.__years_experience = staff_years_experience
+        if isinstance(staff_years_experience, int) and staff_years_experience > 0 and len(
+                str(staff_years_experience)) == 4:
+            self.__years_experience = staff_years_experience
+        else:
+            raise TypeError("this data must be an int")
 
     @staticmethod
-    def hi_to_new_staff():
-        return f"Say 'Hello' to our new {employee.job_position}-{employee.name}"
+    def calculate_allowance_percentage(years_experience):
+        allowance_percentage = years_experience * 0.5
+        return allowance_percentage
 
     @classmethod
     def create_new_staff(cls, job_position, name):
-        return f"{job_position} {name} was created"
+        return cls(job_position, name)
 
-    def calculate_allowance_percentage(self):
-        allowance_percentage = self.years_experience * 0.5
-        return f"current allowance percentage for relevant employee is equal {allowance_percentage}"
+    def hi_to_new_staff(self, job_position, name):
+        return f"Say 'Hello' to our new {job_position}-{name}"
 
 
 if __name__ == '__main__':
-    employee = Staff()
+    Staff.create_new_staff('cleaner', 'Misha')
