@@ -75,9 +75,9 @@ class Staff():
     def create_new_staff(cls, job_position, name):
         return cls(job_position, name)
 
-    def hi_to_new_staff(self, job_position, name):
-        return f"Say 'Hello' to our new {job_position}-{name}"
+    def hi_to_new_staff(self):
+        return f"Say 'Hello' to our new {self.job_position}-{self.name}"
 
 
 if __name__ == '__main__':
-    Staff.create_new_staff('cleaner', 'Misha')
+    pass
