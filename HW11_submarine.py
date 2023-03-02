@@ -147,3 +147,4 @@ class Submarine(ICraft, Isubmarine):
     def _emergence(self):
         self._depth = +5
         print("We are on the surface")
+
