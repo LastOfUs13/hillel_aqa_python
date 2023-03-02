@@ -16,4 +16,3 @@ class ICraft(ABC):
     @abstractmethod
     def _stop_motor(self):
         pass
-

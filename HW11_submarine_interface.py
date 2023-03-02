@@ -27,4 +27,3 @@ class Isubmarine(ABC):
     @abstractmethod
     def _emergence(self):
         pass
-
