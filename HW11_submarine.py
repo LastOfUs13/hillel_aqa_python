@@ -52,10 +52,6 @@ class Submarine(ICraft, Isubmarine):
     def latitude(self, new_latitude):
         self.__latitude = new_latitude
 
-    @latitude.setter
-    def latitude(self, new_latitude):
-        self.__latitude = new_latitude
-
     @longitude.setter
     def longitude(self, new_longitude):
         self.__longitude = new_longitude
@@ -79,10 +75,9 @@ class Submarine(ICraft, Isubmarine):
     # Polymorphism
 
     def get_coordinates_and_move(self, latitude, longitude):
-        if isinstance(latitude, int) and len(str(latitude)):
-            print(f'We are preparing to move next coordinates :{latitude},{longitude}')
-            with open('coordinates', 'w') as file:
-                file.write(f"{latitude},{longitude}")
+        print(f'We are preparing to move next coordinates :{latitude},{longitude}')
+        with open('coordinates', 'w') as file:
+            file.write(f"{latitude},{longitude}")
         self._start_motor()
 
     # Encapsulation
