@@ -74,7 +74,7 @@ class Submarine(ICraft, Isubmarine):
 
     # Polymorphism
 
-    def get_coordinates_and_move(self, latitude, longitude):
+    def get_coordinates_and_move(self, latitude: int, longitude: int):
         print(f'We are preparing to move next coordinates :{latitude},{longitude}')
         with open('coordinates', 'w') as file:
             file.write(f"{latitude},{longitude}")

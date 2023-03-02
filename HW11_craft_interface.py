@@ -6,7 +6,7 @@ from abc import ABC, abstractmethod
 class ICraft(ABC):
 
     @abstractmethod
-    def get_coordinates_and_move(self, latitude, longitude):
+    def get_coordinates_and_move(self, latitude:int, longitude:int):
         pass
 
     @abstractmethod
