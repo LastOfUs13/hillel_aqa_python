@@ -102,12 +102,13 @@ class Submarine(ICraft, Isubmarine):
     def _stop_motor(self):
         print('We arrived')
         self._motor_status = False
-        self._raising_the_periscope()
         with open('coordinates', "r+") as file:
             coordinates = file.read()
             upd = coordinates.split(",")
             self.latitude = upd[0]
             self.longitude = upd[1]
+        self._raising_the_periscope()
+
 
     # Encapsulation
     def _raising_the_periscope(self):
