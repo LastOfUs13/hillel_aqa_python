@@ -29,4 +29,3 @@ if __name__ == '__main__':
     proxy_func = TxtProxyReaderAndWriter(txt_reader, txt_writer)
     # print(proxy_func.read_file())
     proxy_func.write_file("hello,it's ME again!")
-

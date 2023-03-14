@@ -6,4 +6,3 @@ class TxtWriter:
     def write_file(self, user_data):
         with open(self.__file_path, 'w') as file:
             file.write(user_data)
-
