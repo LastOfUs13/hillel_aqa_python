@@ -19,8 +19,11 @@ class TxtProxyReaderAndWriter:
             return self.__result
 
     def write_file(self, user_data):
-        self.__result = self.__writer.write_file(user_data)
-        self.__is_actual = True
+        if user_data == self.__result:
+            self.__is_actual = False
+        else:
+            self.__writer.write_file(user_data)
+            return self.__result
 
 
 if __name__ == '__main__':
