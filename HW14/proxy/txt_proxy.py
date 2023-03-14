@@ -30,4 +30,3 @@ if __name__ == '__main__':
     # print(proxy_func.read_file())
     proxy_func.write_file("hello,it's ME again!")
 
-

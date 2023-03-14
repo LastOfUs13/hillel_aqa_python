@@ -7,4 +7,3 @@ class TxtWriter:
         with open(self.__file_path, 'w') as file:
             file.write(user_data)
 
-

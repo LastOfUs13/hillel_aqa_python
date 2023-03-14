@@ -6,4 +6,3 @@ class TxtReader:
         with open(self.__file_path) as file:
             text = file.read()
         return text
-
