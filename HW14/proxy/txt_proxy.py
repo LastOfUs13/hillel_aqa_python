@@ -1,5 +1,5 @@
-from txt_reader import TxtReader
-from txt_writer import TxtWriter
+from proxy.txt_reader import TxtReader
+from proxy.txt_writer import TxtWriter
 
 
 class TxtProxyReaderAndWriter:
@@ -27,6 +27,5 @@ if __name__ == '__main__':
     txt_reader = TxtReader('some.txt')
     txt_writer = TxtWriter('some.txt')
     proxy_func = TxtProxyReaderAndWriter(txt_reader, txt_writer)
-    # print(proxy_func.read_file())
-    proxy_func.write_file("hello,it's ME again!")
-
+    print(proxy_func.read_file())
+    proxy_func.write_file("hello,it's me")
