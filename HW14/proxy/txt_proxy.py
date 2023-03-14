@@ -1,5 +1,5 @@
-from proxy.txt_reader import TxtReader
-from proxy.txt_writer import TxtWriter
+from txt_reader import TxtReader
+from txt_writer import TxtWriter
 
 
 class TxtProxyReaderAndWriter:
